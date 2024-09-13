@@ -20,11 +20,15 @@ public class CreatingController {
     @GetMapping("/person")
     @ResponseBody
     public Person personJson(){
-        Person person = new Person();
-        person.setId(1);
-        person.setNames("Max");
+        Person person1 = new Person();
+        person1.setId(1);
+        person1.setNames("Max");
 
-        return person;
+        Person person2= Person.builder()
+                .id(1).names("Pero")
+                .build();
+
+        return person1;
 
         // Personperson = personRepository.findById(7);
     }
